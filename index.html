@@ -7,7 +7,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Added link to the jQuery library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
   <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -18,73 +19,82 @@
 
   <!--Added a link for images-->
 
-  <link rel="Images" href="assets/images">
+  <link rel="images" href="assets/images">S
 
 
 </head>
    <body>
 
-    
-        <h1>CrystalsCollectors!</h1>
+    <div class="container">
+
+        <div class ="row"> 
+
+            <h1>CrystalsCollectors!</h1>
+
+        </div>   
         
+        <div class="row1">
+            <div class="col-lg-6 thehowtos">
+        
+                         
+                <p>You will be given a random number at the start of the game</p>
+                <P>There are four crystals below. By clicking on a crystal you will add a 
+                   specific amount of points to your total score</P>
+                <p>You win the game by mathcing your total score to the random number, you
+                   loose the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each
+                        crystal</p>
+
+            </div>
+
+        </div>
         <br>
 
-            <p1> 
+        <div class = "row2">
+            <div class="col-lg-4 randomNumber">Random Number Generation</div>
+            <br>
+            <div class = "col-lg-4"></div>
+            <div class = "col-lg-4 totalWLs"></div>
+                <div id ="row wins">Wins</div>
+                <div id ="row losses">Losses</div>
+
+        </div>
+        <br>
+        <div class ="row3">ImagePlaceholder
+                <div class="col-lg-3">
+                    <div id="imgDiamond"></div>
+                </div>    
+        
+                <div class="col-lg-3">
+                    <div id="imgRuby"></div>
+                </div>    
                 
-                You will be given a random number at the start of the game<br><br>
+                <div class="col-lg-3">
+                    <div id="imgSapphire"></div>  
+                </div>      
+                
+                <div class ="col-lg-3">
+                    <div id="imgYellowcrystal"></div>
+                </div>    
 
-                There are four crystals below. By clicking on a crystal you will add a 
-                specific amount of points to your total score.<br><br>
-                You win the game by mathcing your total score to the random number, you
-                loose the game if your total score goes above the random number.<br><br>
-                The value of each crystal is hidden from you until you click on it.<br><br>
-                Each time when the game starts, the game will change the values of each
-                crystal<br><br>
-
-            </p1>
-
+        </div>    
         <br>
-        <br>
-        
-        "
-            <p2>
-
-               Place holder for the random number and wins / losses 
-
-            </p2>
-
-        <br>
+        <div class="row4">
+               <div class="col-log-6 totalScore">This is your total scores:</div>
+        </div>
         <br>
         
-            <p3>
+        <div class="row5">
+                <div class="col-log 6 scoreDispay">Your Score</div>
+        </div>
+    
 
-              <img src="assets/images/Diamondimage.jpg" style="width:75px;height:75px;">
-              <img src="assets/images/Rubyimage.jpg" style="width: 75px;height:75px;">
-              <img src="assets/images/Sapphireimage.jpg" style="width: 75px; height:75px;">
-              <img src="assets/images/Yellowcrystalimage.jpg" style ="width: 75; height: 75px;">
-
-
-            </p3>
-
-        <br>
-        <br>
-        
-            <p4>
-  
-                Your Total score is:
-
-            </p4>
-
-        <br>
-        <br>
-        
-            <p5>
-
-                Wins <br>
-                Loses <br>
-
-            </p5>
-
+      </div>
+    
+      
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
        
     </body>
   

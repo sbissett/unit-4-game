@@ -9,67 +9,55 @@ h1 {
 
     background-color: brown;
     color: antiquewhite;
-    margin-right: 1100px;
-    Padding: 50px;
-    Height:75px;
-    width: 30%;
-    text-align: justify
+    margin-left: -200px;
+    Padding: 50px;  
     
-    
-
-    
+   
     
 }
 
-p1 {
+.row1 {
 
     background-color: blanchedalmond;
     color: green;
-    padding:20px;
-    text-align: justify;
-    Height:350px;
-    width: 45%;
+    margin-top: 25px;
+    margin-bottom: 25px;
     margin-right: 800px;
-    
-    float: right;
+    margin-left: -215px;
+    Padding-top: 25px;
+    padding-bottom: 25px;
    
    
-    
-
 }
 
-p2 {
+.row2 {
 
     background-color: green;
     color: black;
-    padding:40px;
-    text-align: justify;
-    Height:150px;
+    Height:160px;
     width: 35%;
-    margin-right: 940px;
-    float: right;
+    margin-right: 930px;
+    float:right;
     margin-top: 25px;
+    text-align: justify;
     
-    
-    
-
 }
 
-p3 {
+.row3 {
 
 
     background-color: blueviolet;
-    padding:20px;
     text-align: justify;
-    Height: 100px;
-    width: 45%;
-    margin-right: 800px;
-    float: right;
+    Height:80px;
+    width: 35%;
+    margin-right: 930px;
+    float:right;
     margin-top: 25px;
+    text-align: justify;
     
-
+ 
 }
-p4 {
+.row4 {
 
     background-color: aqua;
     color: white;
@@ -84,7 +72,7 @@ p4 {
    
 }
 
-p5 {
+.row5 {
 
     background-color: blue;
     color: white;
@@ -95,8 +83,6 @@ p5 {
     margin-right: 930px;
     float:right;
     margin-top: 25px;
-    margin-bottom: 75px;
-
 
 }
 
