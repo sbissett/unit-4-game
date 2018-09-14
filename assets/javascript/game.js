@@ -26,27 +26,27 @@ var compNumber = Math.floor(Math.random() *102) + 19;
  
 var gemDiamond = Math.floor(Math.random() *12 ) +1;
     console.log("Gem Diamond: " + gemDiamond);
-    $("#imgDiamond").html("<img src=" + "assets/images/Diamondimage.jpg" + " value=" + gemDiamond + ">");
+    $("#imgDiamond").append("<img src=" + "assets/images/Diamondimage.jpg" + " value=" + gemDiamond + ">");
 
 var gemRuby = Math.floor(Math.random() *12) + 1;
     console.log("Gem Ruby: " +gemRuby);
-    $("#imgRuby").html("img src=" + "assets/images/Rubyimage.jpg") + " value=" + gemRuby + ">";
+    $("#imgRuby").append("<img src=" + "assets/images/Rubyimage.jpg" + " value=" + gemRuby + ">");
 
-var gemSapphire = Math.floor(Math.random() *12 ) +1;
-    console.log("Gem Sapphire; " + gemSapphire);
-    $("#imgSapphire").html("img src" + "assets/images/Sapphireimage.jpg") + " value=" + gemSapphire + ">");
+ var gemSapphire = Math.floor(Math.random() *12 ) +1;
+     console.log("Gem Sapphire; " + gemSapphire);
+     $("#imgSapphire").append("<img src=" + "assets/images/Sapphireimage.jpg" + " value=" + gemSapphire + ">");
     
 
-var gemYellowcrystal = Math.floor(Math.random () *12 ) +1;
-    console.log("Gem Yellow Crystal; " + gemYellowcrystal);
-    $("#imgYellowcrystal").html("img src" + "assets/images/Yellowcrystalimage.jpg") + " value=" + gemYellowcrystal + ">";   
+ var gemYellowcrystal = Math.floor(Math.random () *12 ) +1;
+     console.log("Gem Yellow Crystal; " + gemYellowcrystal);
+    $("#imgYellowcrystal").append("<img src=" + "assets/images/Yellowcrystalimage.jpg" + " value=" + gemYellowcrystal + ">");   
 
 
 //Starting with my functions
 
 
     
-}
+
 
 
 
