@@ -60,20 +60,30 @@ function reset () {
     compNumber = Math.floor(Math.random() *102 +19);
         console.log("compNumber: " + compNumber);
 
-     $(".scoredisplay").html(score) 
+     $(".scoreDisplay").html(score);
+  
      
-     gemDiamond = Math.floor(Math.random() *12) +1;
-        console.log("gemDiamond: " +gemDiamond);
-        $()
+    gemDiamond = Math.floor(Math.random() *12) +1;
+        console.log("gemDiamond: " + gemDiamond);
+        $("#imgDiamond").html("<img src=" + "assets/images/Diamondimage.jpg" + "value =" + imgDiamond + ">");
 
+    gemRuby = Math.floor(Math.random() *12) +1;
+        console.log("gemRuby: " + gemRuby);
+        $("#imgRuby").html("<img src =" + "assets/images/Rubyimage.jpg" + "value=" + imgRuby + ">");
+
+    gemSapphire = Math.floor(Math.random() *12) +1;
+        console.log("gemSapphire: " + gemSapphire);
+        $("#imgSapphire").html("<img src =" + "assets/images/Sapphireimage.jpg" + "value=" + imgSapphire + ">");
+
+
+    gemYellowcrystal = Math.floor(Math.random() *12) +1;
+        console.log("gemYellowcrystal: " + gemYellowcrystal);
+        $("#imgYellowcrystal").html("<img src = " + "assets/images/Yellowcrytsalimage.jpg" + "value=" + imgYellowcrystal + ">");   
+
+        $('img').on("click", function(){
+            
+        })
 }
-
-
-
-    
-
-
-
 
 });
 
