@@ -5,6 +5,7 @@
 //* Player presses random crystal to increase score
 //* When player hits a crystal it will update players score
 //* Player wins if their score matches random number
+    //\\* add an event listener for the craystals; then add the logic to what I want to occur.
 //* Player looses if their scores goes above random number
 //* Wins and Loses tallied throughout game
 //* Game restarts when player wins or looses.
@@ -41,8 +42,32 @@ var gemRuby = Math.floor(Math.random() *12) + 1;
      console.log("Gem Yellow Crystal; " + gemYellowcrystal);
     $("#imgYellowcrystal").append("<img src=" + "assets/images/Yellowcrystalimage.jpg" + " value=" + gemYellowcrystal + ">");   
 
+// A few more variables
+
+var wins = 0;
+    console.log("wins: " + wins);
+
+var losses = 0;
+    console.log("losses: " + losses);
+    
+var score = 0;
+    console.log("score: " + score);
+
 
 //Starting with my functions
+
+function reset () {
+    compNumber = Math.floor(Math.random() *102 +19);
+        console.log("compNumber: " + compNumber);
+
+     $(".scoredisplay").html(score) 
+     
+     gemDiamond = Math.floor(Math.random() *12) +1;
+        console.log("gemDiamond: " +gemDiamond);
+        $()
+
+}
+
 
 
     

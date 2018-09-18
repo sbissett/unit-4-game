@@ -1,89 +1,46 @@
 body {
 
     background-color: lightblue;
-    
-    
+        
 }
 
-h1 {
+.header {
 
     background-color: brown;
     color: antiquewhite;
-    margin-left: -200px;
-    Padding: 50px;  
-    
-   
+    Padding: 25px;
     
 }
 
-.row1 {
 
-    background-color: blanchedalmond;
-    color: green;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-right: 800px;
-    margin-left: -215px;
-    Padding-top: 25px;
-    padding-bottom: 25px;
-   
-   
-}
 
-.row2 {
+.thehowtos {
 
     background-color: green;
     color: black;
-    Height:160px;
-    width: 35%;
-    margin-right: 930px;
-    float:right;
-    margin-top: 25px;
-    text-align: justify;
-    
+    padding:25px;    
+  
 }
 
-.row3 {
 
 
-    background-color: blueviolet;
-    text-align: justify;
-    Height:80px;
-    width: 35%;
-    margin-right: 930px;
-    float:right;
-    margin-top: 25px;
-    text-align: justify;
-    
- 
-}
-.row4 {
+.totalScore {
 
     background-color: aqua;
     color: white;
-    padding: 20px;
-    text-align: justify;
-    Height:80px;
-    width: 35%;
-    margin-right: 930px;
-    float:right;
-    margin-top: 25px;
+    padding: 25px;
 
-   
+    
+      
 }
 
-.row5 {
+.scoreDisplay {
 
-    background-color: blue;
+    background-color: black;
     color: white;
-    padding: 20px;
-    text-align: justify;
-    Height:80px;
-    width: 35%;
-    margin-right: 930px;
-    float:right;
-    margin-top: 25px;
-
+    Padding:25px;
+   
+   
 }
 
 
