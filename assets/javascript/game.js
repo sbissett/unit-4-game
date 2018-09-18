@@ -17,6 +17,7 @@ $(document).ready(function() {
 
 //*create and array for computer guess options between 9 and 120
 //where the computer begins it's guesses at 19 and ends at 102
+// I got this concept and tactics
 
 
 var compNumber = Math.floor(Math.random() *102) + 19;
@@ -54,7 +55,7 @@ var score = 0;
     console.log("score: " + score);
 
 
-//Starting with my functions
+//Starting with my functions - Full Transparency - Function code pirated from web
 
 function reset () {
     compNumber = Math.floor(Math.random() *102 +19);
@@ -81,9 +82,48 @@ function reset () {
         $("#imgYellowcrystal").html("<img src = " + "assets/images/Yellowcrytsalimage.jpg" + "value=" + imgYellowcrystal + ">");   
 
         $('img').on("click", function(){
+            var totalScore = scoreDisplay += parseInt ($(this).attr("value"));
+                console.log("Total Score: " + totalScore);
+            $(".scoreDisplay").html(totalSocre); 
             
-        })
-}
+            if(totalScore === compNumber){
+                wins++;
+                $(".wins").html("Wins: " + wins);
+                    console.log("Wins: " + wins);
+                    reset();
+                   
+            }
+            else if (totalScore > compNumber) {
+                losses++ ;
+                $(".losses").html("Losses: " + losses);
+                reset();
 
-});
+            }
 
+          });
+
+        };
+        
+    });
+
+    $("img").on("click", function() {
+        var totalScore = scoreDisplay += parseInt($(this.attr("vaue")));
+
+            console.log("Total Score: " + totalScore);
+        $(".scoreDisplay").html(totalScore);
+        
+        if(totalScore === compNumber) {
+            wins++ ;
+            $(".wins").html ("Wins: " + wins);
+            reset();
+
+          }
+
+        else if (totalScore > compNumber) {
+            losses ++ ;
+            $(".osses").html("losses: " + losses);
+            reset();
+        }  
+
+
+    });
