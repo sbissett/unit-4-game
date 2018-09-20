@@ -13,37 +13,111 @@
 
 // to tee up jquery with start with the $(document).ready(function() {}
 
+var gems = [
+
+    {
+        name: "diamond",
+        source: "assets/images/Diamondimage.jpg"
+    },
+
+    {
+        name: "ruby",
+        source: "assets/images/Rubyimage.jpg"
+    },
+
+    {
+        name: "Sapphire",
+        source: "assets/images/Sapphireimage.jpg"
+    },
+
+    {
+        name: "Sapphire",
+        source: "assets/images/Yellowcrystalimage.jpg"
+    }
+]
+
+
 $(document).ready(function() { 
+
+
+    $("#crystalZone").on("click", "img", function() {
+
+        console.log("were in here");
+        // var totalScore = scoreDisplay += parseInt($(this.attr("vaue")));
+
+        //     console.log("Total Score: " + totalScore);
+        // $(".scoreDisplay").html(totalScore);
+        
+        // if(totalScore === compNumber) {
+        //     wins++ ;
+        //     $(".wins").html ("Wins: " + wins);
+        //     reset();
+
+        //   }
+
+        // else if (totalScore > compNumber) {
+        //     losses ++ ;
+        //     $(".osses").html("losses: " + losses);
+        //     reset();
+        // }  
+
+
+    });
+    
 
 //*create and array for computer guess options between 9 and 120
 //where the computer begins it's guesses at 19 and ends at 102
 // I got this concept and tactics
 
+function gemScore () {
+    
+    return Math.floor(Math.random() *12);
+
+}
+
+function makeGems() {
+    var crystalZone = $ ("#crystalZone") 
+    for (var i =0; i < 4; i++) {
+        var gemImage = $ ("<img>" );
+           
+        var currentGem = gems[i];
+        gemImage.attr('src', currentGem.source);
+        gemImage.addClass("gem");
+        gemImage.attr('name', currentGem.name);
+        gemImage.attr('score', gemScore())
+        crystalZone.append(gemImage)
+
+}}
+    makeGems() 
+});
+
+// var compNumber = Math.floor(Math.random() *102) + 19;
+//     console.log("compNumber: " + compNumber);
+//     $(".randomNumber").html(compNumber);
+
+ 
+// var gemDiamond = Math.floor(Math.random() *12 ) +1;
+//     console.log("Gem Diamond: " + gemDiamond);
+//     $("#imgDiamond").append("<img src=" + "assets/images/Diamondimage.jpg" + " value=" + gemDiamond + ">");
+
+// var gemRuby = Math.floor(Math.random() *12) + 1;
+//     console.log("Gem Ruby: " +gemRuby);
+//     $("#imgRuby").append("<img src=" + "assets/images/Rubyimage.jpg" + " value=" + gemRuby + ">");
+
+//  var gemSapphire = Math.floor(Math.random() *12 ) +1;
+//      console.log("Gem Sapphire; " + gemSapphire);
+//      $("#imgSapphire").append("<img src=" + "assets/images/Sapphireimage.jpg" + " value=" + gemSapphire + ">");
+    
+
+//  var gemYellowcrystal = Math.floor(Math.random () *12 ) +1;
+//      console.log("Gem Yellow Crystal; " + gemYellowcrystal);
+//     $("#imgYellowcrystal").append("<img src=" + "assets/images/Yellowcrystalimage.jpg" + " value=" + gemYellowcrystal + ">");   
+
+// A few more variables
 
 var compNumber = Math.floor(Math.random() *102) + 19;
     console.log("compNumber: " + compNumber);
     $(".randomNumber").html(compNumber);
-
-
- 
-var gemDiamond = Math.floor(Math.random() *12 ) +1;
-    console.log("Gem Diamond: " + gemDiamond);
-    $("#imgDiamond").append("<img src=" + "assets/images/Diamondimage.jpg" + " value=" + gemDiamond + ">");
-
-var gemRuby = Math.floor(Math.random() *12) + 1;
-    console.log("Gem Ruby: " +gemRuby);
-    $("#imgRuby").append("<img src=" + "assets/images/Rubyimage.jpg" + " value=" + gemRuby + ">");
-
- var gemSapphire = Math.floor(Math.random() *12 ) +1;
-     console.log("Gem Sapphire; " + gemSapphire);
-     $("#imgSapphire").append("<img src=" + "assets/images/Sapphireimage.jpg" + " value=" + gemSapphire + ">");
-    
-
- var gemYellowcrystal = Math.floor(Math.random () *12 ) +1;
-     console.log("Gem Yellow Crystal; " + gemYellowcrystal);
-    $("#imgYellowcrystal").append("<img src=" + "assets/images/Yellowcrystalimage.jpg" + " value=" + gemYellowcrystal + ">");   
-
-// A few more variables
 
 var wins = 0;
     console.log("wins: " + wins);
@@ -55,7 +129,9 @@ var score = 0;
     console.log("score: " + score);
 
 
+
 //Starting with my functions - Full Transparency - Function code pirated from web
+
 
 function reset () {
     compNumber = Math.floor(Math.random() *102 +19);
@@ -104,26 +180,6 @@ function reset () {
 
         };
         
-    });
-
-    $("img").on("click", function() {
-        var totalScore = scoreDisplay += parseInt($(this.attr("vaue")));
-
-            console.log("Total Score: " + totalScore);
-        $(".scoreDisplay").html(totalScore);
-        
-        if(totalScore === compNumber) {
-            wins++ ;
-            $(".wins").html ("Wins: " + wins);
-            reset();
-
-          }
-
-        else if (totalScore > compNumber) {
-            losses ++ ;
-            $(".osses").html("losses: " + losses);
-            reset();
-        }  
 
 
-    });
+   

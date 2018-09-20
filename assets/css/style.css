@@ -15,14 +15,18 @@ body {
 
 
 .thehowtos {
-;
+
     background-color: green;
     color: black;
     padding:25px;    
   
 }
 
+.gem {
 
+    height: 200px;
+    width: 200px;
+}
 
 .totalScore {
 
