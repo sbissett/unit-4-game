@@ -36,18 +36,27 @@ var gems = [
     }
 ]
 
+var scoreDisplay = $(".score")
+var wins = 0;
+    console.log("wins: " + wins);
 
+var losses = 0;
+    console.log("losses: " + losses);
+    
+var score = 0;
+    console.log("score: " + score);
 $(document).ready(function() { 
 
 
-    $("#crystalZone").on("click", "img", function() {
+    $("#crystalZone").on("click", "img", function(event) {
 
         console.log("were in here");
-        // var totalScore = scoreDisplay += parseInt($(this.attr("vaue")));
-
-        //     console.log("Total Score: " + totalScore);
+        var scoreValue = event.currentTarget.attributes.score.value;
+        score = score + parseInt(scoreValue);
+        console.log(score)
+            // console.log("Total Score: " + totalScore);
         // $(".scoreDisplay").html(totalScore);
-        
+        scoreDisplay.html(score)
         // if(totalScore === compNumber) {
         //     wins++ ;
         //     $(".wins").html ("Wins: " + wins);
@@ -115,18 +124,11 @@ function makeGems() {
 
 // A few more variables
 
-var compNumber = Math.floor(Math.random() *102) + 19;
+var compNumber = Math.floor(Math.random() *102) + 19; // this is the random computer generated number
     console.log("compNumber: " + compNumber);
     $(".randomNumber").html(compNumber);
 
-var wins = 0;
-    console.log("wins: " + wins);
 
-var losses = 0;
-    console.log("losses: " + losses);
-    
-var score = 0;
-    console.log("score: " + score);
 
 
 
@@ -140,22 +142,22 @@ function reset () {
      $(".scoreDisplay").html(score);
   
      
-    gemDiamond = Math.floor(Math.random() *12) +1;
-        console.log("gemDiamond: " + gemDiamond);
-        $("#imgDiamond").html("<img src=" + "assets/images/Diamondimage.jpg" + "value =" + imgDiamond + ">");
+    // gemDiamond = Math.floor(Math.random() *12) +1;
+    //     console.log("gemDiamond: " + gemDiamond);
+    //     $("#imgDiamond").html("<img src=" + "assets/images/Diamondimage.jpg" + "value =" + imgDiamond + ">");
 
-    gemRuby = Math.floor(Math.random() *12) +1;
-        console.log("gemRuby: " + gemRuby);
-        $("#imgRuby").html("<img src =" + "assets/images/Rubyimage.jpg" + "value=" + imgRuby + ">");
+    // gemRuby = Math.floor(Math.random() *12) +1;
+    //     console.log("gemRuby: " + gemRuby);
+    //     $("#imgRuby").html("<img src =" + "assets/images/Rubyimage.jpg" + "value=" + imgRuby + ">");
 
-    gemSapphire = Math.floor(Math.random() *12) +1;
-        console.log("gemSapphire: " + gemSapphire);
-        $("#imgSapphire").html("<img src =" + "assets/images/Sapphireimage.jpg" + "value=" + imgSapphire + ">");
+    // gemSapphire = Math.floor(Math.random() *12) +1;
+    //     console.log("gemSapphire: " + gemSapphire);
+    //     $("#imgSapphire").html("<img src =" + "assets/images/Sapphireimage.jpg" + "value=" + imgSapphire + ">");
 
 
-    gemYellowcrystal = Math.floor(Math.random() *12) +1;
-        console.log("gemYellowcrystal: " + gemYellowcrystal);
-        $("#imgYellowcrystal").html("<img src = " + "assets/images/Yellowcrytsalimage.jpg" + "value=" + imgYellowcrystal + ">");   
+    // gemYellowcrystal = Math.floor(Math.random() *12) +1;
+    //     console.log("gemYellowcrystal: " + gemYellowcrystal);
+    //     $("#imgYellowcrystal").html("<img src = " + "assets/images/Yellowcrytsalimage.jpg" + "value=" + imgYellowcrystal + ">");   
 
         $('img').on("click", function(){
             var totalScore = scoreDisplay += parseInt ($(this).attr("value"));
