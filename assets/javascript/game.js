@@ -5,7 +5,7 @@
 //* Player presses random crystal to increase score
 //* When player hits a crystal it will update players score
 //* Player wins if their score matches random number
-    //\\* add an event listener for the craystals; then add the logic to what I want to occur.
+//\\* add an event listener for the craystals; then add the logic to what I want to occur.
 //* Player looses if their scores goes above random number
 //* Wins and Loses tallied throughout game
 //* Game restarts when player wins or looses.
@@ -38,73 +38,79 @@ var gems = [
 
 var scoreDisplay = $(".score")
 var wins = 0;
-    console.log("wins: " + wins);
+console.log("wins: " + wins);
 
 var losses = 0;
-    console.log("losses: " + losses);
-    
+console.log("losses: " + losses);
+
 var score = 0;
-    console.log("score: " + score);
-$(document).ready(function() { 
+console.log("score: " + score);
+
+var compNumber = Math.floor(Math.random() * 40) + 19; // this is the random computer generated number
+console.log("compNumber: " + compNumber);
+$(".randomNumber").html(compNumber);
+
+$(document).ready(function () {
 
 
-    $("#crystalZone").on("click", "img", function(event) {
+    $("#crystalZone").on("click", "img", function (event) {
 
         console.log("were in here");
         var scoreValue = event.currentTarget.attributes.score.value;
         score = score + parseInt(scoreValue);
-        console.log(score)
-            // console.log("Total Score: " + totalScore);
+        console.log('score', score)
+        // console.log("Total Score: " + totalScore);
         // $(".scoreDisplay").html(totalScore);
         scoreDisplay.html(score)
-        // if(totalScore === compNumber) {
-        //     wins++ ;
-        //     $(".wins").html ("Wins: " + wins);
-        //     reset();
+        if(score === compNumber) {
+            wins++ ;
+            $(".wins").html ("Wins: " + wins);
+            reset();
 
-        //   }
+          }
 
-        // else if (totalScore > compNumber) {
-        //     losses ++ ;
-        //     $(".osses").html("losses: " + losses);
-        //     reset();
-        // }  
+        else if (score > compNumber) {
+            losses ++ ;
+            $(".losses").html("losses: " + losses);
+            reset();
+        }  
 
 
     });
-    
 
-//*create and array for computer guess options between 9 and 120
-//where the computer begins it's guesses at 19 and ends at 102
-// I got this concept and tactics
 
-function gemScore () {
-    
-    return Math.floor(Math.random() *12);
+    //*create and array for computer guess options between 9 and 120
+    //where the computer begins it's guesses at 19 and ends at 102
+    // I got this concept and tactics
 
-}
+    function gemScore() {
 
-function makeGems() {
-    var crystalZone = $ ("#crystalZone") 
-    for (var i =0; i < 4; i++) {
-        var gemImage = $ ("<img>" );
-           
-        var currentGem = gems[i];
-        gemImage.attr('src', currentGem.source);
-        gemImage.addClass("gem");
-        gemImage.attr('name', currentGem.name);
-        gemImage.attr('score', gemScore())
-        crystalZone.append(gemImage)
+        return Math.floor(Math.random() * 12);
 
-}}
-    makeGems() 
+    }
+
+    function makeGems() {
+        var crystalZone = $("#crystalZone")
+        for (var i = 0; i < 4; i++) {
+            var gemImage = $("<img>");
+
+            var currentGem = gems[i];
+            gemImage.attr('src', currentGem.source);
+            gemImage.addClass("gem");
+            gemImage.attr('name', currentGem.name);
+            gemImage.attr('score', gemScore())
+            crystalZone.append(gemImage)
+
+        }
+    }
+    makeGems()
 });
 
 // var compNumber = Math.floor(Math.random() *102) + 19;
 //     console.log("compNumber: " + compNumber);
 //     $(".randomNumber").html(compNumber);
 
- 
+
 // var gemDiamond = Math.floor(Math.random() *12 ) +1;
 //     console.log("Gem Diamond: " + gemDiamond);
 //     $("#imgDiamond").append("<img src=" + "assets/images/Diamondimage.jpg" + " value=" + gemDiamond + ">");
@@ -116,7 +122,7 @@ function makeGems() {
 //  var gemSapphire = Math.floor(Math.random() *12 ) +1;
 //      console.log("Gem Sapphire; " + gemSapphire);
 //      $("#imgSapphire").append("<img src=" + "assets/images/Sapphireimage.jpg" + " value=" + gemSapphire + ">");
-    
+
 
 //  var gemYellowcrystal = Math.floor(Math.random () *12 ) +1;
 //      console.log("Gem Yellow Crystal; " + gemYellowcrystal);
@@ -124,9 +130,7 @@ function makeGems() {
 
 // A few more variables
 
-var compNumber = Math.floor(Math.random() *102) + 19; // this is the random computer generated number
-    console.log("compNumber: " + compNumber);
-    $(".randomNumber").html(compNumber);
+
 
 
 
@@ -135,13 +139,15 @@ var compNumber = Math.floor(Math.random() *102) + 19; // this is the random comp
 //Starting with my functions - Full Transparency - Function code pirated from web
 
 
-function reset () {
-    compNumber = Math.floor(Math.random() *102 +19);
-        console.log("compNumber: " + compNumber);
+function reset() {
+    compNumber = Math.floor(Math.random() * 40 + 19);
+    score=0;
+    console.log("newcompNumber: " + compNumber);
 
-     $(".scoreDisplay").html(score);
-  
-     
+    $(".scoreDisplay").html("");
+    $(".randomNumber").html(compNumber);
+
+
     // gemDiamond = Math.floor(Math.random() *12) +1;
     //     console.log("gemDiamond: " + gemDiamond);
     //     $("#imgDiamond").html("<img src=" + "assets/images/Diamondimage.jpg" + "value =" + imgDiamond + ">");
@@ -159,29 +165,28 @@ function reset () {
     //     console.log("gemYellowcrystal: " + gemYellowcrystal);
     //     $("#imgYellowcrystal").html("<img src = " + "assets/images/Yellowcrytsalimage.jpg" + "value=" + imgYellowcrystal + ">");   
 
-        $('img').on("click", function(){
-            var totalScore = scoreDisplay += parseInt ($(this).attr("value"));
-                console.log("Total Score: " + totalScore);
-            $(".scoreDisplay").html(totalSocre); 
-            
-            if(totalScore === compNumber){
-                wins++;
-                $(".wins").html("Wins: " + wins);
-                    console.log("Wins: " + wins);
-                    reset();
-                   
-            }
-            else if (totalScore > compNumber) {
-                losses++ ;
-                $(".losses").html("Losses: " + losses);
-                reset();
 
-            }
+};
 
-          });
+// $('img').on("click", function(){
+//     var totalScore = scoreDisplay += parseInt ($(this).attr("value"));
+//         console.log("Total Score: " + totalScore);
+//     $(".scoreDisplay").html(totalScore); 
 
-        };
-        
+//     if(totalScore === compNumber){
+//         wins++;
+//         $("wins").html("wins: " + wins);
+//             console.log("wins: " + wins);
+//             reset();
+
+//     }
+//     else if (totalScore > compNumber) {
+//         losses++ ;
+//         $("losses").html("losses: " + losses);
+//         reset();
+
+//     }
+
+//   });
 
 
-   
